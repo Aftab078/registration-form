@@ -5,13 +5,13 @@
 
  const app = express();
  dotenv.config();
- 
+  
  const Port = process.env.PORT || 3000;
 
  const username = process.env.MONGODB_USERNAME;
  const password = process.env.MONGODB_PASSWORD;
  mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.melvvb5.mongodb.net/registartionFromDB`, {
-    userNewUrlParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
  });
 
